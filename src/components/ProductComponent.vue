@@ -1,7 +1,7 @@
 <template>
-	<div class="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-16 px-4 sm:px-6 md:px-8 xl:px-12">
+	<div class="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-16 px-4 sm:px-10 md:px-20">
 			<slot name="productHeading"></slot>
-			<div class="grid grid-cols-2 gap-10 mt-6">
+			<div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10 mt-6">
 				<div class="col-span-1">
 					<image-component></image-component>
 				</div>

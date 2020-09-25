@@ -2,8 +2,8 @@
 	<div id="app">
 		<product-component :finalPrice="finalPrice" :addons="addons">
 			<template v-slot:productHeading>
-				<h1 class="text-4xl font-extrabold text-gray-900">Get your Kemper Profiling Amp</h1>
-				<h2 class="text-xl text-gray-500">All your favorite amps and effects, together in one little box</h2>
+				<h1 class="md:text-center lg:text-left text-4xl font-extrabold text-gray-900 leading-tight">Get your Kemper Profiling Amp</h1>
+				<h2 class="md:text-center lg:text-left text-xl text-gray-500">All your favorite amps and effects, together in one little box</h2>
 				<hr class="text-gray-300 mt-8">
 			</template>
 			<template v-slot:productDescription>
