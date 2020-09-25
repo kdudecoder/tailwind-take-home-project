@@ -3,7 +3,7 @@
 		<div class="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-10 md:px-20 py-4 sm:py-6">
 			<div class="grid sm:grid-cols-3 lg:grid-cols-2 gap-6">
 				<div class="col-span-1 hidden sm:block">
-					<div class="grid sm:grid-rows-2 lg:grid-cols-2 gap-4">
+					<div class="grid sm:grid-rows-2 lg:grid-rows-none lg:grid-cols-2 gap-4">
 						<div class="sm:row-span-1 lg:col-span-1">
 							<div class="flex sm:items-center lg:items-start">
 								<svg class="h-8 w-8 fill-current text-gray-400" viewBox="0 0 20 20" fill="currentColor">
