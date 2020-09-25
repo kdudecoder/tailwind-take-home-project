@@ -21,6 +21,8 @@
 </template>
 
 <script type="text/javascript">
+import { EventBus } from '../main.js';
+
 export default {
 	props: {
 		addon: {
@@ -52,7 +54,7 @@ export default {
 
 				this.addon['selected'] = buy;
 
-				this.$emit('priceChanged', {price:newPrice, addonType:this.addonType});
+				EventBus.$emit('priceChanged', {price:newPrice, addonType:this.addonType});
 			}
 		},
 

@@ -4,6 +4,8 @@ import App from './App.vue'
 
 import Numeral from 'numeral'
 
+export const EventBus = new Vue();
+
 Vue.use(Numeral)
 
 Vue.filter("formatNumber", function (value) {
