@@ -21,7 +21,7 @@
 						This is made possible by a radical, patented technology and concept which we call "PROFILING".
 					</p>
 						
-					<addon-component v-for="(addon,index) in addons" :key="index" :finalPrice="finalPrice" @priceChanged="finalPrice = $event.price; powerAmp = $event.addonType" :addon="addon">
+					<addon-component v-for="(addon,index) in addons" :key="index" :finalPrice="finalPrice" @priceChanged="finalPrice = $event.price;" :addon="addon">
 					</addon-component>	
 
 					<specifications-component></specifications-component>
@@ -94,9 +94,6 @@ export default {
 	data() {
 		return {
 			finalPrice: 1799,			
-			formFactor: 0,
-			powerAmp: 0,
-			footController: 0,
 			addons: [
 			{
 				name : 'Form Factor',
@@ -113,7 +110,8 @@ export default {
 					description: '3U rackmount version of the classic profiling amplifier.',
 					price: 0
 				}
-				]
+				],
+				selected: false
 			},
 			{
 				name : 'Power Amp',
@@ -122,15 +120,15 @@ export default {
 					type: 0,
 					heading: 'None',
 					description: 'Use in the studio or with your own power amp.',
-					price: 0
+					price: 0					
 				},
 				{
 					type: 1,
 					heading: 'Powered',
 					description: 'Built-in 600W solid state power amp.',
-					price: 449
-				}
-				]
+					price: 449				}
+				],
+				selected: false
 			},
 			{
 				name : 'Foot Controller',
@@ -147,34 +145,11 @@ export default {
 					description: '',
 					price: 449
 				}
-				]
+				],
+				selected: false
 			},
 			]
 		}
-	},
-	methods: {		
-		chooseFormFactor(type) {
-			this.formFactor = type;
-		},
-		addFootController(buy) {
-			if(buy == 1 && !this.footController) {
-				this.finalPrice += 499;
-				this.footController = !this.footController;
-			}
-			if(buy == 0 && this.footController) {
-				this.finalPrice -= 499;
-				this.footController = !this.footController;
-			}
-		}
-		
-	},
-	mounted () {
-		document.addEventListener('scroll',  this.handleScroll);
-	},
-
-	destroyed: function () {
-		document.removeEventListener('scroll', this.handleScroll);
-
 	},
 }
 </script>

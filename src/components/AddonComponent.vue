@@ -50,6 +50,8 @@ export default {
 				this.addonPrice = price;
 				this.addonType = buy;
 
+				this.addon['selected'] = buy;
+
 				this.$emit('priceChanged', {price:newPrice, addonType:this.addonType});
 			}
 		},
